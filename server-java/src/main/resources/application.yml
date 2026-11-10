@@ -1,0 +1,44 @@
+server:
+  port: 8787
+  tomcat:
+    max-swallow-size: 24MB
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 8MB
+      max-request-size: 24MB
+  datasource:
+    url: ${ZHX_DB_URL:jdbc:h2:file:./data/zhx-java;MODE=MySQL;DATABASE_TO_LOWER=TRUE;NON_KEYWORDS=KEY,VALUE,READ,TIME,NO;DB_CLOSE_DELAY=-1;AUTO_SERVER=FALSE}
+    username: ${ZHX_DB_USER:sa}
+    password: ${ZHX_DB_PASSWORD:}
+  mvc:
+    throw-exception-if-no-handler-found: true
+    log-resolved-exception: false
+  web:
+    resources:
+      add-mappings: false
+  jackson:
+    default-property-inclusion: always
+    serialization:
+      write-dates-as-timestamps: false
+  h2:
+    console:
+      enabled: false
+
+app:
+  schema:
+    mysql-file: docs/java-migration/mysql-ddl.sql
+  demo:
+    seed: true
+  ai:
+    base-url: ${ZHX_AI_SERVICE:http://127.0.0.1:8280}
+  demo-delay:
+    pay-ms: 6000
+    refund-ms: 10000
+  auto-settle: true
+
+logging:
+  level:
+    root: INFO
+    com.zhx: INFO

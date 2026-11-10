@@ -1,0 +1,25 @@
+{
+  "name": "zhaohuaxishi",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "powershell -NoProfile -ExecutionPolicy Bypass -File server-java/run.ps1",
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File server-java/run.ps1",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "echarts": "^6.1.0",
+    "leaflet": "^1.9.4",
+    "pinia": "^2.3.1",
+    "qrcode": "^1.5.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.3.5"
+  }
+}

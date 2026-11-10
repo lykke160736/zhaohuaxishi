@@ -1,0 +1,16 @@
+node_modules/
+dist/
+data/
+.screenshots/
+.trae-html-share-packages/
+
+.maven-cache/
+server-java/target/
+ai-services/**/target/
+ai-services/local.ps1
+.idea/
+.env
+.env.*
+*.log
+*.mv.db
+*.trace.db
